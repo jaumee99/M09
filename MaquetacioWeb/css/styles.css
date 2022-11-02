@@ -1,6 +1,6 @@
-.container {  display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+.container {  
+    display: grid;
+    grid-template-rows: 20vh 70vh 10vh;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -12,17 +12,11 @@
   body {
     background-color: #FAEBD7;
     }
-  
-  img {
-    object-fit: fill;
-  }
 
-  .img img {
+  .Img img {
     object-fit: fill;
-    width:65%;
-    height:65%;
-    margin-top: 10%;
-    margin-left: 10%;
+    width:100%;
+    height:100%;
   }
 
   .Header {  display: grid;
@@ -70,11 +64,23 @@
     grid-area: Footer;
   }
   
-  .Info { grid-area: Info; }
+  .Info { 
+    grid-area: Info; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
-  .XarxesSocials { grid-area: XarxesSocials; }
+  .XarxesSocials { 
+    grid-area: XarxesSocials; 
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   
-  .Body {  display: grid;
+  .Body {  
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -168,66 +174,74 @@
   
   html, body , .container {
     height: 100%;
-    margin: 0;
   }
   
 
-
-
-  @media only screen and (min-width: 600px) {
-    
-.container {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1.7fr 0.7fr 1.1fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Header"
-    "Img"
-    "Class"
-    "Specific";
-}
-
-.Class { grid-area: Class; }
-
-.Specific {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Opcio1 Opcio2 Opcio3"
-    "Opcio1 Opcio2 Opcio3"
-    "Opcio1 Opcio2 Opcio3";
-  grid-area: Specific;
-}
-
-.Opcio1 { grid-area: Opcio1; }
-
-.Opcio2 { grid-area: Opcio2; }
-
-.Opcio3 { grid-area: Opcio3; }
-
-.Img { grid-area: Img; }
-
-.Header {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Options Title Logo"
-    "Options Title Logo"
-    "Options Title Logo";
-  grid-area: Header;
-}
-
-.Options { grid-area: Options; }
-
-.Title { grid-area: Title; }
-
-.Logo { grid-area: Logo; }
-
-
+@media only screen and (max-width: 850px) {
+  .container {  display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header"
+      "Body"
+      "Footer";
   }
+    
+  .Faqs {
+    display: none;
+  }
+    
+  .Body {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: Body;
+    grid-template-areas:
+    "Imatge"
+    "Opcio1 Opcio2 Opcio3"
+    "Selection"
+  }
+
+  .Imatge{
+    grid-area: Imatge ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Opcio1{
+    grid-area: Opcio1 ;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .Opcio2{
+    grid-area: Opcio2 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Opcio3{
+    grid-area: Opcio3 ;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .Opcio1 img{ margin-top: 70%; }
+
+  .Opcio2 img{ margin-top: 70%; }
+  
+  .Opcio3 img{ margin-top: 70%;}
+
+  .Selection{
+    grid-area: Selection ;
+    height: 0%;
+  }
+}
