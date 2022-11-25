@@ -9,26 +9,93 @@
 <body>
 
   <div class="container">
-    <div class="Header"></div>
+
+    <div class="Header">
+      <h1>Exàmen HTML i CSS</h1>
+    </div>
+
     <div class="cosPrincipal"></div>
-    <div class="seccioInferior">
-      <div class="html1"></div>
-      <div class="html2"></div>
-      <div class="audio"></div>
-      <div class="web"></div>
-    </div>
     <div class="esquerra">
-      <div class="slideshow"></div>
-      <div class="titol"></div>
-      <div class="paragraf"></div>
-      <div class="video"></div>
+      <div class="slideshow">
+<!--slideshow funciona pero si esta acticat cambia el format de la pagina 
+
+        <div class="w3-content w3-section" style="max-width:500px">
+          <img class="mySlides" src="./imatges/1.jpg" style="width:100%">
+          <img class="mySlides" src="./imatges/2.jpg" style="width:100%">
+          <img class="mySlides" src="./imatges/3.jpg" style="width:100%">
+        </div>
+        <script>
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+          }
+          </script>
+-->
+      </div>
+      <div class="titol">
+        <h1>Primer titol</h1>
+      </div>
+      <div class="paragraf">
+        <a>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat”</a>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
     </div>
+
     <div class="dreta">
-      <div class="caixa1"></div>
-      <div class="caixa2"></div>
-      <div class="caixa3"></div>
+      <div class="caixa1">
+        <img src="./imatges/music.png">
+      </div>
+      <div class="caixa2">
+         <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="caixa3">
+        <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</a>
+      </div>
     </div>
-    <div class="Footer"></div>
+
+    <div class="seccioInferior">
+      <div class="html1">
+        <div class="box">
+          <a>Html</a>
+        </div>
+      </div>
+      <div class="html2">
+        <div class="box">
+          <a>Html</a>
+        </div>
+      </div>
+      <div class="audio">
+        <div class="box">
+          <a>audio</a>
+        </div>
+      </div>
+      <div class="web">
+        <div class="box">
+          <a>web</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer">
+      <h1>Aplicacions Web - SMx 2017</h1>
+    </div>
   </div>
 
 </body>
